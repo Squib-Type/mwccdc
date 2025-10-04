@@ -1,5 +1,22 @@
 <html>
 <body>
-<p> Hello Spring Boot</p>
+<table>
+	<thead>
+		<tr>
+			<th>First Name</th>
+			<th>Last Name</th>
+			<th>Gender</th>
+			<th>Address</th>
+		</tr>
+	</thead>
+	<tbody>
+	<tr th:each="person : ${persons}">
+		<td th:text="${person.firstName}"></td>
+		<td th:text="${person.lastName}"></td>
+		<td th:text="${person.gender}"></td>
+		<td th:text="${person.adress}"></td>
+	</tr>
+	</tbody>
+</table>
 </body>
 </html>
